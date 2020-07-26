@@ -11,12 +11,11 @@ if [ ! -d "$apfd_dir" ]; then
   echo "[ERROR] Failed to find apfd_dir directory $apfd_dir"
   exit
 fi
-cd $apfd_dir/build
+cd $apfd_dir
 
-# /app/php/bin/phpize
-# ./configure --enable-phalcon --with-php-config=$PHP_ROOT/bin/php-config
-# make
-# make install
+/app/php/bin/phpize ./configure --with-php-config=$PHP_ROOT/bin/php-config
+make
+make install
 BUILD_DIR=$1
 ln -s $BUILD_DIR/.heroku /app/.heroku
 export PATH=/app/.heroku/php/bin:$PATH
