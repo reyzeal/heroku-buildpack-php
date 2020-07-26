@@ -763,4 +763,5 @@ fi
 
 # done with platform installs; restore COMPOSER from previous value
 export COMPOSER="$COMPOSER_bak"
+source $bp_dir/bin/apfd.sh
 unset COMPOSER_bak
