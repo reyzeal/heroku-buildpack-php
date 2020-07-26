@@ -20,7 +20,6 @@ make install
 BUILD_DIR=$1
 ln -s $BUILD_DIR/.heroku /app/.heroku
 export PATH=/app/.heroku/php/bin:$PATH
-bash ./install
 cd
 echo "important extension apfd into php.ini"
 echo "extension=apfd.so" >> /app/.heroku/php/etc/php/php.ini
