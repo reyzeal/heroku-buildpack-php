@@ -13,7 +13,7 @@ if [ ! -d "$apfd_dir" ]; then
 fi
 cd $apfd_dir
 
-/app/php/bin/phpize ./configure --with-php-config=$PHP_ROOT/bin/php-config
+/app/php/bin/phpize ./configure --with-php-config=/app/.heroku/php/bin/php-config
 make
 make install
 BUILD_DIR=$1
